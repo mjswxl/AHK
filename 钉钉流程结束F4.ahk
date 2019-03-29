@@ -26,12 +26,16 @@ send %element%
 for index, element in array1
 {
 检测(element)
-if  ( jc = 1 )
+iif  ( jc = 1 )  ;检测到指定对象就跳过下面的语句
+			{
+				goto ,Label1
+			}
 }
 
 点击("选择流程",10,10)
 send {tab 2} {enter}
 点击("确定按钮",10,10)
+Label1:
 }
 
 
