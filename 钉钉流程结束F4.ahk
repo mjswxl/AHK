@@ -23,10 +23,11 @@ for index, element in array
 send ^a
 send %element%
 点击("查询按钮",10,10)
+;Sleep %time1%
 for index, element in array1
 {
 检测(element)
-iif  ( jc = 1 )  ;检测到指定对象就跳过下面的语句
+if  ( jc = 1 )  ;检测到指定对象就跳过下面的语句
 			{
 				goto ,Label1
 			}
@@ -44,7 +45,7 @@ Label1:
  i := 0
  loop 
  {
-  sleep %time1%
+  ;sleep %time1%
   i := i + 1
     if (i > 10)
   {
@@ -89,4 +90,4 @@ FoundY := FoundY + pyy
 }
 }
 
-;F12::Pause
+F12::Pause
